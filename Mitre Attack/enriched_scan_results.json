@@ -1,0 +1,68 @@
+[
+  {
+    "port": "21/tcp",
+    "threat": "High",
+    "cvss": 7.5,
+    "qod": 95,
+    "name": "FTP Brute Force Logins With Default Credentials Reporting",
+    "description": {
+      "summary": "It was possible to login into the remote FTP server using weak/known credentials.",
+      "credentials_found": [
+        "admin:admin",
+        "user:user"
+      ],
+      "impact": "Remote attacker may gain access to sensitive information or modify system configuration.",
+      "solution": {
+        "type": "Mitigation",
+        "text": "Change the password as soon as possible."
+      },
+      "insight": "The following devices/software are affected: CVE-2001-1594, CVE-2013-7404, CVE-2014-9198, CVE-2015-7261, CVE-2016-8731, CVE-2017-8218, CVE-2018-9068, CVE-2018-17771, CVE-2018-19063, CVE-2018-19064",
+      "detection_method": "Detected weak credentials via VT 'FTP Brute Force Logins With Default Credentials'.",
+      "references": [
+        "CVE-1999-0501",
+        "CVE-1999-0502",
+        "CVE-1999-0507",
+        "CVE-1999-0508",
+        "CVE-2001-1594",
+        "CVE-2013-7404",
+        "CVE-2014-9198",
+        "CVE-2015-7261",
+        "CVE-2016-8731",
+        "CVE-2017-8218",
+        "CVE-2018-9068",
+        "CVE-2018-17771",
+        "CVE-2018-19063",
+        "CVE-2018-19064"
+      ],
+      "oid": "1.3.6.1.4.1.25623.1.0.108718",
+      "version_used": "2025-05-13T05:41:39Z"
+    }
+  },
+  {
+    "port": "80/tcp",
+    "threat": "Medium",
+    "cvss": 5.3,
+    "qod": 80,
+    "name": "phpinfo() Output Reporting (HTTP)",
+    "description": {
+      "summary": "Reporting of files containing the output of the phpinfo() PHP function previously detected via HTTP.",
+      "impact": "Potential disclosure of sensitive information such as usernames, IP addresses, server version, and configuration.",
+      "solution": {
+        "type": "Workaround",
+        "text": "Delete the listed files or restrict access to them."
+      },
+      "insight": "PHP tutorials often leave phpinfo.php accessible on servers. This can leak sensitive environment data.",
+      "detection_method": "Reported by VT 'phpinfo() Output Detection (HTTP)'.",
+      "references": [
+        "CVE-2008-0149",
+        "CVE-2023-49282",
+        "CVE-2023-49283",
+        "CVE-2024-10486",
+        "https://www.php.net/manual/en/function.phpinfo.php",
+        "https://beaglesecurity.com/blog/vulnerability/revealing-phpinfo.html"
+      ],
+      "oid": "1.3.6.1.4.1.25623.1.0.11229",
+      "version_used": "2025-07-09T05:43:50Z"
+    }
+  }
+]
